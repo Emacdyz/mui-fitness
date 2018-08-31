@@ -4,6 +4,8 @@ import Paper from '@material-ui/core/Paper';
 import Date from './Components/Date'
 import CarDetails from './Components/CarDetails'
 import DamageReport from './Components/DamageReport'
+import BrandButtons from './Theme-Components/Buttons/BrandButtons'
+import DynamicButton from './Theme-Components/Buttons/DynamicButton'
 
 const style = {
   divider: {
@@ -24,6 +26,8 @@ class App extends Component {
           <div style={style.divider} />
           <DamageReport />
         </Paper>
+        <BrandButtons />
+        <DynamicButton />
      </div>
     );
   }

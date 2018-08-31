@@ -20,7 +20,7 @@ const theme = createMuiTheme({
     },
   },
   textPrimary: {
-  
+    main: '#4F4F4F',
   },
   typography: {
     // Tell Material-UI what's the font-size on the html element is.

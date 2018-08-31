@@ -18,7 +18,7 @@ class DatePicker extends Component {
         <Typography variant="title" color="primary">
           Report your car damage online
         </Typography>
-        <Typography variant="body1" color="secondary-dark" style={{marginTop: 10}}>
+        <Typography variant="body1" color="textPrimary" style={{marginTop: 10}}>
           Please report your car damage using the easy to fill in form below.
           After reviewing the submitted damage report, we will be in contact with you regarding the next steps of the damage handling process.
         </Typography>

@@ -17,17 +17,17 @@ export const damageText = {
 }
 
 export const damage = [{
-  1: {
+  overview: {
     picture: './tutorial_01.jpg',
     title: 'Overview Photo',
     text: 'Take a photo of your car from a larger distance. The photo must clearly show all the damaged parts of your car.',
   },
-  2: {
+  detail: {
     picture: './tutorial_01.jpg',
     title: 'Overview Photo',
     text: 'Take a photo of your car from a larger distance. The photo must clearly show all the damaged parts of your car.',
   },
-  3: {
+  test: {
     picture: './tutorial_01.jpg',
     title: 'Overview Photo',
     text: 'Take a photo of your car from a larger distance. The photo must clearly show all the damaged parts of your car.',

@@ -3,45 +3,23 @@ import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import { damage } from '../data'
+import { damage, damagePicture, damageText, damageTitle } from '../data'
 
 const styles = {
   card: {
-    width: '25%',
+    width: '20%',
   },
   cardDisplay: {
     display: 'flex',
     justifyContente: 'space-between',
+    width: '100%',
   }
 };
 
 class DamageReport extends Component {
 
-  renderCard = (damage) => {
-    console.log(damage) 
-    return (
-      <Card className={styles.card}>
-        <CardMedia
-          component="img"
-          // className={classes.media}
-          height="140"
-          // image={damage}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
-            {/* {damageTitle} */}
-          </Typography>
-          <Typography component="p">
-            {/* {damageText} */}
-          </Typography>
-        </CardContent>
-      </Card>
-    )
-  }
-
   render() {
-    console.log(damage.map(dam => this.renderCard(dam)))
+    console.log(damage)
     return (
       <div>
         <Typography variant="title" color="primary">
@@ -51,7 +29,39 @@ class DamageReport extends Component {
           Add at least 3 clear photos of your damage as described in the box below.
         </Typography>
         <div style={styles.cardDisplay}>
-          {/* {damage.map(dam => this.renderCard(dam))} */}
+        <Card style={styles.card}>
+        <CardMedia
+          component="img"
+          height="140"
+          image={damagePicture[1]}
+        />
+        <CardContent>
+          <Typography variant="body1" component="p"> {damageTitle[1]} </Typography>
+          <Typography component="p"> {damageText[1]} </Typography>
+        </CardContent>
+      </Card>
+      <Card style={styles.card}>
+        <CardMedia
+          component="img"
+          height="140"
+          image={damagePicture[2]}
+        />
+        <CardContent>
+          <Typography variant="body1" component="h2"> {damageTitle[2]} </Typography>
+          <Typography component="p"> {damageText[2]} </Typography>
+        </CardContent>
+      </Card>
+      <Card style={styles.card}>
+        <CardMedia
+          component="img"
+          height="140"
+          image={damagePicture[3]}
+        />
+        <CardContent>
+          <Typography variant="body1" component="h2"> {damageTitle[3]} </Typography>
+          <Typography component="p"> {damageText[3]} </Typography>
+        </CardContent>
+      </Card>
         </div>
      </div>
     );

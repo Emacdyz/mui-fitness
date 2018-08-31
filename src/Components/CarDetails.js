@@ -11,7 +11,7 @@ class CarDetails extends Component {
         <Typography variant="title" color="primary">
           Car details
         </Typography>
-        <Typography variant="body1" color="secondary-dark" style={{marginTop: 10}}>
+        <Typography variant="body1" color="textPrimary" style={{marginTop: 10}}>
           What is your license plate?
         </Typography>
         <TextField 
