@@ -11,8 +11,10 @@ const styles = {
   root: {
     flexGrow: 1,
   },
-  flex: {
-    flexGrow: 1,
+  bar: {
+    display: 'inline-flex',
+    width: '100%',
+    justifyContent: 'space-around',
   },
   menuButton: {
     marginLeft: 20,
@@ -23,15 +25,13 @@ const NavBar = props => {
   const { classes } = props
   return (
     <div className={classes.root}>
-      <AppBar position="sticky" color="secondary">
-        <Toolbar>
+      <AppBar position="sticky" color="secondary" style={{ boxShadow: 'none' }}>
+        <Toolbar style={styles.bar }>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
             <img src="./fixico-logo.svg" height='40px' alt="logo" />
+            {/* <img src="./aon-logo.svg" height='40px' alt="logo" /> */}
           </IconButton>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            
-          </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">EN | NL</Button>
         </Toolbar>
       </AppBar>
     </div>

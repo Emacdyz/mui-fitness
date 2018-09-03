@@ -15,7 +15,7 @@ class DatePicker extends Component {
     const { selectedDate } = this.state
     return (
       <div>
-        <Typography variant="title" color="primary">
+        <Typography variant="title" color="">
           Report your car damage online
         </Typography>
         <Typography variant="body1" color="textPrimary" style={{marginTop: 10}}>

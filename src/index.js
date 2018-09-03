@@ -3,7 +3,8 @@ import App from './App'
 import ReactDOM from 'react-dom'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
 import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider'
-import DateFnsUtils from 'material-ui-pickers/utils/date-fns-utils';
+import DateFnsUtils from 'material-ui-pickers/utils/date-fns-utils'
+import './index.css'
 
 const theme = createMuiTheme({
   palette: {
