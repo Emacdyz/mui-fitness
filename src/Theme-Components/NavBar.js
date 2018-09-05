@@ -25,13 +25,24 @@ const NavBar = props => {
   const { classes } = props
   return (
     <div className={classes.root}>
-      <AppBar position="sticky" color="secondary" style={{ boxShadow: 'none' }}>
+      <AppBar position="static" color="inherit" style={{ boxShadow: 'none' }}>
         <Toolbar style={styles.bar }>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
             <img src="./fixico-logo.svg" height='40px' alt="logo" />
             {/* <img src="./aon-logo.svg" height='40px' alt="logo" /> */}
           </IconButton>
-          <Button color="inherit">EN | NL</Button>
+          <div>
+            <Button
+              color="inherit"
+              // href="https://aon.business.fixico-staging.nl/?lang=en"
+              style={{ padding: 6, minWidth: 0 }}>EN</Button>
+            <Button
+              color="inherit"
+              style={{ padding: 6, minWidth: 0 }}>FR</Button>
+            <Button
+              color="inherit"
+              style={{ padding: 6, minWidth: 0 }}>NL</Button>
+          </div>
         </Toolbar>
       </AppBar>
     </div>

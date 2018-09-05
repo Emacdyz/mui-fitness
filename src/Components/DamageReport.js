@@ -19,7 +19,6 @@ const styles = {
 class DamageReport extends Component {
 
   render() {
-    console.log(damage)
     return (
       <div>
         <Typography variant="title" color="primary">

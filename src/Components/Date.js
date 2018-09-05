@@ -15,10 +15,10 @@ class DatePicker extends Component {
     const { selectedDate } = this.state
     return (
       <div>
-        <Typography variant="title" color="">
+        <Typography variant="display3" color="primary">
           Report your car damage online
         </Typography>
-        <Typography variant="body1" color="textPrimary" style={{marginTop: 10}}>
+        <Typography variant="body1" >
           Please report your car damage using the easy to fill in form below.
           After reviewing the submitted damage report, we will be in contact with you regarding the next steps of the damage handling process.
         </Typography>
@@ -27,10 +27,8 @@ class DatePicker extends Component {
           label="Date of the occurrence of the damage"
           value={selectedDate}
           onChange={this.handleDateChange}
-          format="DD/MM/YYYY"
-          style={{ width: '30%', margin: '20px 5px' }}
+          style={{ width: '40%', margin: '20px 5px' }}
         />
-        
      </div>
     );
   }
