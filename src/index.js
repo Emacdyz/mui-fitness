@@ -90,6 +90,7 @@ const theme = createMuiTheme({
       fontSize: '14px',
       lineHeight: '18px',
       fontWeight: 700,
+      paddingBottom: '5px',
     },
     body1: {
       fontSize: '14px',

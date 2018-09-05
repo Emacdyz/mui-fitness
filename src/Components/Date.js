@@ -30,7 +30,7 @@ class DatePicker extends Component {
           style={{ width: '40%', margin: '20px 5px' }}
         />
      </div>
-    );
+    )
   }
 }
 

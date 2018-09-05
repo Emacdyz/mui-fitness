@@ -3,67 +3,76 @@ import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import { damage, damagePicture, damageText, damageTitle } from '../data'
-
-const styles = {
-  card: {
-    width: '20%',
-  },
-  cardDisplay: {
-    display: 'flex',
-    justifyContente: 'space-between',
-    width: '100%',
-  }
-};
+import Grid from '@material-ui/core/Grid'
+import Button from '@material-ui/core/Button'
+import AddIcon from '@material-ui/icons/Add';
+import { damagePicture, damageText, damageTitle } from '../data'
 
 class DamageReport extends Component {
 
   render() {
     return (
       <div>
-        <Typography variant="title" color="primary">
+        <Typography variant="display3" color="primary">
           Damage Report
         </Typography>
-        <Typography variant="subheading" color="primary" style={{marginTop: 10}}>
+        <Typography variant="body1" style={{ marginTop: 12 }} >
           Add at least 3 clear photos of your damage as described in the box below.
         </Typography>
-        <div style={styles.cardDisplay}>
-        <Card style={styles.card}>
-        <CardMedia
-          component="img"
-          height="140"
-          image={damagePicture[1]}
-        />
-        <CardContent>
-          <Typography variant="body1" component="p"> {damageTitle[1]} </Typography>
-          <Typography component="p"> {damageText[1]} </Typography>
-        </CardContent>
-      </Card>
-      <Card style={styles.card}>
-        <CardMedia
-          component="img"
-          height="140"
-          image={damagePicture[2]}
-        />
-        <CardContent>
-          <Typography variant="body1" component="h2"> {damageTitle[2]} </Typography>
-          <Typography component="p"> {damageText[2]} </Typography>
-        </CardContent>
-      </Card>
-      <Card style={styles.card}>
-        <CardMedia
-          component="img"
-          height="140"
-          image={damagePicture[3]}
-        />
-        <CardContent>
-          <Typography variant="body1" component="h2"> {damageTitle[3]} </Typography>
-          <Typography component="p"> {damageText[3]} </Typography>
-        </CardContent>
-      </Card>
+        <Grid
+          container
+          direction="row"
+          spacing={24}
+          style={{ marginTop: 12 }}
+        >
+          <Grid item xs={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={damagePicture[1]}
+              />
+              <CardContent>
+                <Typography variant="subheading"> {damageTitle[1]} </Typography>
+                <Typography variant="body1"> {damageText[1]} </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={damagePicture[2]}
+              />
+              <CardContent>
+                <Typography variant="subheading"> {damageTitle[2]} </Typography>
+                <Typography variant="body1"> {damageText[2]} </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={damagePicture[3]}
+              />
+              <CardContent>
+                <Typography variant="subheading"> {damageTitle[3]} </Typography>
+                <Typography variant="body1"> {damageText[3]} </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+        <div style={{ display: 'inline-flex', margin: '20px 10px', alignItems: 'center'}}>
+          <Button variant="fab" color="primary">
+            <AddIcon />
+          </Button>
+          <Typography variant="body2" > Add your picture </Typography>
         </div>
-     </div>
-    );
+      </div>
+    )
   }
 }
 

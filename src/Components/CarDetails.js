@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
-import Collapse from '@material-ui/core/Collapse'
 import Date from './Date'
 import { IconButton } from '../../node_modules/@material-ui/core'
-import Slide from '@material-ui/core/Slide';
+import Slide from '@material-ui/core/Slide'
+import DamageReport from './DamageReport'
+
+const style = {
+  divider: {
+    margin: '30px 0'
+  },
+}
 
 class CarDetails extends Component {
   state = {
@@ -34,8 +40,12 @@ class CarDetails extends Component {
         <IconButton onClick={this.handleClick} color="primary">
           <img src="./search.svg" height='40px' alt="search" />
         </IconButton>
-        <Slide direction="up" in={checked}>
+        <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
           <Date />
+        </Slide> 
+        <div style={style.divider} />    
+        <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+          <DamageReport />
         </Slide>     
      </div>
     );
