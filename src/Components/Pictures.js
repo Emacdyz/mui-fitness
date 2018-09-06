@@ -23,10 +23,11 @@ class Pictures extends Component {
         <Grid
           container
           direction="row"
+          justify="center"
           spacing={24}
           style={{ marginTop: 12 }}
         >
-          <Grid item xs={4}>
+          <Grid item lg={4} md={4} sm={6} xs={12}>
             <Card style={{ minHeight: '100%' }}>
               <CardMedia
                 component="img"
@@ -39,7 +40,7 @@ class Pictures extends Component {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item lg={4} md={4} sm={6} xs={12}>
             <Card style={{ minHeight: '100%' }}>
               <CardMedia
                 component="img"
@@ -52,7 +53,7 @@ class Pictures extends Component {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item lg={4} md={4} sm={6} xs={12}>
             <Card style={{ minHeight: '100%' }}>
               <CardMedia
                 component="img"

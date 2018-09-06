@@ -23,8 +23,12 @@ class App extends Component {
       <div>
         <NavBar />
         <Divider />
-        <Grid container style={style.grid} >
-          <Grid item xs={6}>
+        <Grid 
+          container 
+          spacing={24}
+          justify="center"
+          style={style.grid} >
+          <Grid item lg={6} md={8} sm={10} xs={10}>
             <Header />
             <div style={style.divider} />
             <DamageReport />

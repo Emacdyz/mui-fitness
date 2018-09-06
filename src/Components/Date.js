@@ -27,7 +27,7 @@ class DatePicker extends Component {
           label="Date of the occurrence of the damage"
           value={selectedDate}
           onChange={this.handleDateChange}
-          style={{ width: '40%', margin: '20px 5px' }}
+          style={{ width: '308px', paddingBottom: '10px', margin: '20px 5px' }}
         />
      </div>
     )

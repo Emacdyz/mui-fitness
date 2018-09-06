@@ -37,11 +37,12 @@ class DamageReport extends Component {
           id="license-plate"
           label="NL -"
           placeholder="01GBB1"
-          style={{ width: '20%', margin: '20px 5px' }}
+          style={{ width: '200px', margin: '20px 5px' }}
         />
         <IconButton onClick={this.handleClick} color="primary">
           <img src="./search.svg" height='40px' alt="search" />
         </IconButton>
+        <div style={style.divider} />  
         <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
           <Date />
         </Slide> 
