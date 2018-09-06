@@ -1,78 +1,64 @@
 import React, { Component } from 'react'
 import Typography from '@material-ui/core/Typography'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
-import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
-import AddIcon from '@material-ui/icons/Add';
-import { damagePicture, damageText, damageTitle } from '../data'
+import TextField from '@material-ui/core/TextField'
+import Date from './Date'
+import IconButton  from '@material-ui/core/IconButton'
+import Slide from '@material-ui/core/Slide'
+import Pictures from './Pictures'
+import Description from './Description'
+import DriverDetails from './DriverDetails'
+
+const style = {
+  divider: {
+    margin: '30px 0'
+  },
+}
 
 class DamageReport extends Component {
+  state = {
+    checked: false,
+  }
+
+  handleClick = () => {
+    this.setState(state => ({ checked: !state.checked }));
+  }
 
   render() {
+    const { checked } = this.state
     return (
       <div>
         <Typography variant="display3" color="primary">
-          Damage Report
+          Car details
         </Typography>
-        <Typography variant="body1" style={{ marginTop: 12 }} >
-          Add at least 3 clear photos of your damage as described in the box below.
+        <Typography variant="body1" >
+          What is your license plate?
         </Typography>
-        <Grid
-          container
-          direction="row"
-          spacing={24}
-          style={{ marginTop: 12 }}
-        >
-          <Grid item xs={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={damagePicture[1]}
-              />
-              <CardContent>
-                <Typography variant="subheading"> {damageTitle[1]} </Typography>
-                <Typography variant="body1"> {damageText[1]} </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={damagePicture[2]}
-              />
-              <CardContent>
-                <Typography variant="subheading"> {damageTitle[2]} </Typography>
-                <Typography variant="body1"> {damageText[2]} </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={4}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="140"
-                image={damagePicture[3]}
-              />
-              <CardContent>
-                <Typography variant="subheading"> {damageTitle[3]} </Typography>
-                <Typography variant="body1"> {damageText[3]} </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-        <div style={{ display: 'inline-flex', margin: '20px 10px', alignItems: 'center'}}>
-          <Button variant="fab" color="primary">
-            <AddIcon />
-          </Button>
-          <Typography variant="body2" > Add your picture </Typography>
-        </div>
-      </div>
-    )
+        <TextField 
+          id="license-plate"
+          label="NL -"
+          placeholder="01GBB1"
+          style={{ width: '20%', margin: '20px 5px' }}
+        />
+        <IconButton onClick={this.handleClick} color="primary">
+          <img src="./search.svg" height='40px' alt="search" />
+        </IconButton>
+        <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+          <Date />
+        </Slide> 
+        <div style={style.divider} />    
+        <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+          <Pictures />
+        </Slide>
+        <div style={style.divider} />   
+        <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+          <Description />
+        </Slide>
+        <div style={style.divider} />
+        <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+          <DriverDetails />
+        </Slide>
+     </div>
+    );
   }
 }
 

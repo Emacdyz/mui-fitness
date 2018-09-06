@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NavBar from './Theme-Components/NavBar'
-import CarDetails from './Components/CarDetails'
+import DamageReport from './Components/DamageReport'
 import { Grid, Divider } from '../node_modules/@material-ui/core'
 import Header from './Components/Header'
 
@@ -27,7 +27,7 @@ class App extends Component {
           <Grid item xs={6}>
             <Header />
             <div style={style.divider} />
-            <CarDetails />
+            <DamageReport />
           </Grid>
         </Grid>
      </div>
