@@ -28,6 +28,7 @@ class App extends Component {
             <Header />
             <div style={style.divider} />
             <DamageReport />
+            <div style={style.divider} />
           </Grid>
         </Grid>
      </div>

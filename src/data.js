@@ -15,21 +15,3 @@ export const damageText = {
   2: 'Take a photo from a shorter distance (approximately 1 meter).',
   3: 'Take a photo from a shorter distance from another angle (approximately 1 meter).',
 }
-
-export const damage = [{
-  overview: {
-    picture: './tutorial_01.jpg',
-    title: 'Overview Photo',
-    text: 'Take a photo of your car from a larger distance. The photo must clearly show all the damaged parts of your car.',
-  },
-  detail: {
-    picture: './tutorial_01.jpg',
-    title: 'Overview Photo',
-    text: 'Take a photo of your car from a larger distance. The photo must clearly show all the damaged parts of your car.',
-  },
-  test: {
-    picture: './tutorial_01.jpg',
-    title: 'Overview Photo',
-    text: 'Take a photo of your car from a larger distance. The photo must clearly show all the damaged parts of your car.',
-  }
-}]
